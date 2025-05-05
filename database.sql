@@ -89,8 +89,12 @@ CREATE TABLE `company` (
 --
 
 INSERT INTO `company` (`id`, `name`, `address`, `createAt`, `updateAt`) VALUES
-(1, 'Chi nhánh TPHCM', '268 Lý Thường Kiệt, Phường 14, Quận 10, TPHCM', NULL, '2022-11-29 10:11:35'),
-(2, 'Chi nhánh Hà Nội', 'Hà Nội', NULL, '2022-11-29 10:11:37');
+(1, 'Chi nhánh Hà Nội', 'Tầng 6, Tòa nhà Capital Place,
+Số 29 Liễu Giai, Ngọc Khánh,
+Ba Đình, Hà Nội.', NULL, '2024-12-12 07:00:35'),
+(2, 'Chi nhánh TPHCM', 'Tầng 24 – 25  tòa nhà Saigon Center 2, 65 Lê Lợi, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam', NULL, '2024-12-12 07:00:35'),
+(3, 'Chi nhánh Đà Nẵng', 'Tầng 10, tòa nhà Petrolimex, 122 Đường Hai Tháng Chín, Quận Hải Châu, Thành phố Đà Nẵng.,
+Ba Đình, Hà Nội.', NULL, '2024-12-12 07:00:35');
 
 -- --------------------------------------------------------
 
