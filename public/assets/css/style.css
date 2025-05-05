@@ -1318,7 +1318,7 @@ section {
   padding: 10px 12px;
 }
 .contact .php-email-form button[type=submit] {
-  background: #1bbd36;
+  background: #FF0000;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1326,7 +1326,7 @@ section {
   border-radius: 4px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #2ae149;
+  background:rgb(247, 154, 154);
 }
 @-webkit-keyframes animate-loading {
   0% {
@@ -1809,7 +1809,7 @@ section {
 }
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #1ed33c;
+  color: #FF0000;
   font-size: 18px;
   line-height: 1;
 }
@@ -1864,14 +1864,14 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #1bbd36;
+  background: #FF0000;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #2ae149;
+  background:rgb(249, 156, 156);
 }
 #footer .credits {
   padding-top: 5px;

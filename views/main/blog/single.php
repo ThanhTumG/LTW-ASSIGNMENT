@@ -355,9 +355,9 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Trụ sở chính</h3>
             <p>
-              Z06 đường số 13 <br>
-              Phường Tân Thuận Đông, Quận 7<br>
-              TP. Hồ Chí Minh, Việt Nam <br><br>
+              Tầng 6, Tòa nhà Capital Place, Số 29 Liễu Giai,<br>
+              Ngọc Khánh,<br>
+              Ba Đình, Hà Nội.<br><br>
               <strong>Điện thoại:</strong> 090 918 34 46<br>
               <strong>Email:</strong> start@vng.com.vn<br>
             </p>
