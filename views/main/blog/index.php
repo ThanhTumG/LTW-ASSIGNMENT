@@ -289,7 +289,7 @@
                       </p>
                       <div class="read-more">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-' . $news->id . '" id=more' . $news->id . '>
+                        <button type="button" class="doc-them" data-bs-toggle="modal" data-bs-target="#modal-' . $news->id . '" id=more' . $news->id . '>
                           Đọc thêm
                         </button>
                       </div>
