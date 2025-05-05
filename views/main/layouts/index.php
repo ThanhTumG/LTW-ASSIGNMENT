@@ -123,7 +123,7 @@
           </div>
           <div class="col-lg-2 col-md-0"></div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-lg-2 col-md-0"></div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box iconbox-pink">
