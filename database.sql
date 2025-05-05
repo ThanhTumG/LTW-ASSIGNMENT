@@ -63,10 +63,10 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id`, `date`, `approved`, `content`, `news_id`, `user_id`, `parent`) VALUES
-(15, '2022-11-30 12:42:55', 1, 'Đánh giá cao', 4, 'guest', NULL),
-(16, '2022-11-30 12:43:18', 1, 'Đồng tình', 4, 'guest', 15),
-(17, '2022-11-30 12:59:46', 1, 'Khai báo', 1, 'guest', NULL),
-(18, '2022-11-30 13:00:24', 1, 'Khai báo quản lý', 1, 'guest', 17);
+(15, '2022-11-30 12:42:55', 1, 'Đánh giá cao', 4, 'thoi@gmail.com', NULL),
+(16, '2022-11-30 12:43:18', 1, 'Đồng tình', 4, 'tung@gmail.com', 15),
+(17, '2022-11-30 12:59:46', 1, 'Khai báo', 1, 'tung@gmail.com', NULL),
+(18, '2022-11-30 13:00:24', 1, 'Khai báo quản lý', 1, 'thoi@gmail.com', 17);
 
 -- --------------------------------------------------------
 
@@ -134,9 +134,15 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `price`, `name`, `description`, `content`, `img`) VALUES
-(1, 28000, 'VÕ LÂM TRUYỀN KỲ MOBILE', 'Võ Lâm Truyền Kỳ là một trò chơi nhập vai trực tuyến nhiều người chơi (MMORPG) được Việt hóa  từ trò chơi Kiếm Hiệp Tình Duyên Online', 'Võ Lâm Truyền Kỳ   là một trò chơi nhập vai trực tuyến nhiều người chơi (MMORPG) được Việt hóa từ trò chơi Kiếm hiệp tình duyên Online (chữ Hán: 剑侠情缘; tiếng Anh: SWORDSMAN Online hay Justice Xwar) của công ty Kingsoft (Kim Sơn) từ Trung Quốc và được VNG phân phối tại Việt Nam. Trò chơi cho phép các người chơi đóng vai dựa theo các tiểu thuyết kiếm hiệp của Trung Quốc. Trò chơi này từng gây cơn sốt ở Trung Quốc và được Hiệp hội Phần mềm Trung Quốc trao giải \"Trò chơi xuất sắc nhất năm 2003\"', './public/img/products/2021_11_30_12_22_53am.png'),
-(2, 25000, 'GUNNY', 'Gunny hay còn gọi là DDTank là trò chơi thuộc thể loại Webgame (Game chơi ngay trên trình duyệt) Casual kết hợp với MMORPG', 'Gunny hay còn gọi là DDTank là trò chơi thuộc thể loại Webgame (Game chơi ngay trên trình duyệt) Casual kết hợp với MMORPG, thuộc thể loại bắn súng canh tọa độ theo lượt (2D Arcade).', './public/img/products/2021_11_30_12_26_21am.png'),
-(3, 25000, 'ZALO', 'Zalo là một trong những ứng dụng gọi điện và nhắn tin quen thuộc trong cuộc sống của chúng ta thời công nghệ', 'Zalo là ứng dụng nhắn tin nhanh đa nền tảng được phát triển bởi công ty VNG ở Việt Nam. Ngoài Việt Nam, ứng dụng này còn được sử dụng tại các quốc gia như Hoa Kỳ, Nhật Bản, Đài Loan, Hàn Quốc, Úc, Đức, Myanmar và Singapore.', './public/img/products/2021_11_30_12_28_11am.png');
+(1, 99999, 'FC ONLINE', 'EA Sports FC Mobile (trước đây là FIFA Mobile) là một trò chơi mô phỏng bóng đá được phát triển bởi EA Mobile và EA Canada, phát hành bởi EA Sports cho iOS và Android.', 
+'EA Sports FC Mobile là tựa game mô phỏng bóng đá hấp dẫn trên iOS và Android, cho phép người chơi xây dựng đội hình mơ ước với hơn 18,000 cầu thủ từ 690 đội bóng và 30 giải đấu, bao gồm Premier League, LaLiga, và UEFA Champions League. Với đồ họa chân thực, hiệu ứng ánh sáng sống động, bình luận trực tiếp và các chế độ chơi đa dạng như Ultimate Team, Club Challenge, hay Rush Mode 5v5, game mang đến trải nghiệm bóng đá đỉnh cao. Cập nhật thường xuyên với các sự kiện thực tế như UEFA Euro 2024 và tính năng chiến thuật FC IQ giúp trò chơi luôn mới mẻ"', 
+'./public/img/products/FCOnline.jpg'),
+(2, 49999, 'Liên quân', 'Garena Liên Quân Mobile VN, còn gọi là Garena Arena of Valor, Garena AOV hay Garena ROV là tựa game cực nhiều người chơi tại Việt Nam và nổi tiếng trên thế giới.',
+ 'Liên Quân Mobile là tựa game MOBA (đấu trường trực tuyến đa người) hấp dẫn trên iOS và Android, do Garena và Tencent phát hành. Người chơi tham gia các trận đấu 5v5 kịch tính, lựa chọn từ hàng trăm tướng với kỹ năng đa dạng, phối hợp đồng đội để phá hủy nhà chính đối phương. Game sở hữu đồ họa sắc nét, lối chơi nhanh, và các chế độ như đấu xếp hạng, đấu thường, hay 3v3. Với các sự kiện thường xuyên, giải đấu eSports quy mô lớn và tính năng tùy chỉnh trang phục, Liên Quân Mobile mang đến trải nghiệm cạnh tranh sôi động, phù hợp cho cả người chơi mới và chuyên nghiệp.',
+  './public/img/products/AOV.jpg'),
+(3, 79999, 'FreeFire', 'Free Fire là tựa game bắn súng sinh tồn online siêu hay, siêu vui với hơn 1 tỷ lượt tải, và hơn 150 triệu người đang chơi.', 
+'Free Fire là tựa game bắn súng sinh tồn (battle royale) nổi tiếng trên iOS và Android, được phát triển bởi Garena. Trong game, 50 người chơi nhảy dù xuống một đảo hoang, tìm kiếm vũ khí và trang bị để trở thành người sống sót cuối cùng trong các trận đấu kéo dài khoảng 10 phút. Với đồ họa mượt mà, lối chơi nhanh, và các chế độ như solo, duo, squad, hay Clash Squad 4v4, Free Fire mang đến trải nghiệm kịch tính. Game thường xuyên cập nhật sự kiện, trang phục, và nhân vật mới, phù hợp cho nhiều thiết bị cấu hình thấp.', 
+'./public/img/products/FreeFire.jpg');
 
 -- --------------------------------------------------------
 
@@ -162,12 +168,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`email`, `profile_photo`, `fname`, `lname`, `gender`, `age`, `phone`, `createAt`, `updateAt`, `password`) VALUES
-('admin', 'public/img/user/default.png', '1', '1', 1, 1, '1', '2022-12-04 20:55:52', '2022-12-04 20:55:52', '$2y$10$WQjEkZWcTefiHVW6zEYI6uBBstDufXDi9YoYtZYD.VNWtX9pyY8PK'),
-('guest', 'public/img/user/default.png', 'Nguyễn', 'Trọng', 1, 22, '0378466105', '2022-11-29 12:49:44', '2022-11-29 12:49:44', '$2y$10$14bVHOtFJrLbBWKMWHxcq.awVuhx7jNXAiNOdl2Gt9rfcXb54Efly'),
-('hangnguyencskh@gmail.com', 'public/img/user/default.png', 'Hung', 'Nguyen', 1, 12, '0365256850', '2022-10-30 22:46:47', '2022-10-30 22:46:47', '$2y$10$pSI5FDqnrmdR4WVEmRwFN.QDs8pWje/azv648VZHk3ZfERKea04gi'),
-('hung', 'public/img/user/default.png', 'Hung', 'Nguyen', 1, 21, '0365256850', '2022-11-29 16:24:36', '2022-11-29 16:24:36', '$2y$10$s703p8Ra/qUVBnOSY6Aq7OJfD3Zdg5Y2fn8Wl3opjIj9E.y.ppbya'),
-('hung123', 'public/img/user/default.png', 'Hung', 'Nguyen', 1, 12, '0365256850', '2022-11-01 22:40:42', '2022-11-01 22:40:42', '$2y$10$Q/u3dg2OtDPVrYupo0EPwOsW0fVOraOIf4a16xtx24I8xrIjvRosO'),
-('username', 'public/img/user/default.png', 'Hung', 'Nguyen', 1, 12, '0365256850', '2022-11-29 16:25:23', '2022-11-29 16:25:23', '$2y$10$tefzv/hp0xZTzzNlR1KDeub.EVXOSsKkC6M720eK31t6wUjqHbn.K');
+('tung@gmail.com', 'public/img/user/avt-1.png', 'Phạm Châu Thanh', 'Tùng', 1, 22, '0986801203', '2025-05-05 12:30:44', '2025-05-05 12:30:44', '$2y$10$.jApl6ep.Owgii0HxK9oHuYTEtdy7AbxoqHrh/7rzmIqF2X8yGWwG'),
+('thanh@gmail.com', 'public/img/user/avt-3.png', 'Kim Nhật', 'Thành', 1, 22, '0834402903', '2025-05-04 12:20:44', '2025-05-04 12:20:44', '$2y$10$.jApl6ep.Owgii0HxK9oHuYTEtdy7AbxoqHrh/7rzmIqF2X8yGWwG'),
+('thoi@gmail.com', 'public/img/user/avt-2.png', 'Nguyễn Thái', 'Thời', 1, 22, '0987234239', '2025-05-05 12:33:44', '2025-05-05 12:33:44', '$2y$10$.jApl6ep.Owgii0HxK9oHuYTEtdy7AbxoqHrh/7rzmIqF2X8yGWwG');
 
 --
 -- Indexes for dumped tables
