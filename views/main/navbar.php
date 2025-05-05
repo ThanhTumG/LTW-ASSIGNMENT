@@ -14,12 +14,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>VNGREEN - Build technology and grow people</title>
+  <title>GARENA</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="public/uploads/favicon.png" rel="icon">
+  <link href="public/uploads/favicon.ico" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -138,7 +138,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.php?page=admin&controller=login&action=index"><img src="public/uploads/favicon.png" class="img-fluid" alt="">VN<span>GREEN</span></a></h1>
+      <h1 class="logo me-auto"><a href="index.php?page=admin&controller=login&action=index"><img src="public/uploads/garena_logo_horizontal.svg" class="img-fluid" alt=""></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="public/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -170,8 +170,8 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links d-flex">
-        <a href="https://www.facebook.com/VNGCorporation.Page/" class="facebook"><i class="bu bi-facebook"></i></a>
-        <a href="https://www.youtube.com/channel/UCk2jT9v-BOmjbPZ08LUbTVA" class="youtube"><i class="bu bi-youtube"></i></a>
+        <a href="https://www.facebook.com/GarenaMobileVN" class="facebook"><i class="bu bi-facebook"></i></a>
+        <a href="https://hotro.garena.vn/" class="youtube"><i class="bu bi-youtube"></i></a>
       </div>
 
     </div>

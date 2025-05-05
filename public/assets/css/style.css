@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #1bbd36;
+  background: #FF0000;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #21df41;
+  background: #FF0000;
   color: #fff;
 }
 .back-to-top.active {
@@ -341,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(4, 4, 4, 0.7);
   padding: 20px;
   color: #fff;
-  border-top: 5px solid #1bbd36;
+  border-top: 5px solid #FF0000;
 }
 #hero .carousel-content h2 {
   color: #fff;
@@ -425,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #1bbd36;
+  background: #FF0000;
 }
 @media (min-width: 1024px) {
   #hero .carousel-content {
