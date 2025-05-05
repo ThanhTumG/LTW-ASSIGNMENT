@@ -19,7 +19,7 @@ include_once('views/main/navbar.php');
 
     <!-- ======= Contact Section ======= -->
     <div class="map-section">
-    <iframe  style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.497177578566!2d106.6943084!3d10.773181499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3954b78d39%3A0x4b3aab5cf24afa17!2sT%C3%B2a%20nh%C3%A0%20Central%20Park%202!5e0!3m2!1svi!2s!4v1746452100446!5m2!1svi!2s" frameborder="0" allowfullscreen></iframe>
+    <iframe  style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0236471701214!2d105.81396439999999!3d21.0317398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab2d1e94f373%3A0x16fecba22edb8121!2sCapital%20Place!5e0!3m2!1svi!2s!4v1746453832548!5m2!1svi!2s" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <section id="contact" class="contact">
