@@ -33,7 +33,7 @@
           <!-- Card 2 -->
           <div class="col" data-aos="zoom-in" data-aos-delay="100">
             <div class="card h-100">
-              <img src="public/assets/img/archives/2.jpg" class="card-img-top" alt="...">
+              <img src="public/assets/img/archives/22.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">TOP 50 DOANH NGHIỆP HÀNG ĐẦU VIỆT NAM</h5>
                 <p class="card-text">(2018, 2017 và 2016, VINASA)</p>
@@ -53,7 +53,7 @@
           <!-- Card 4 -->
           <div class="col" data-aos="zoom-in" data-aos-delay="100">
             <div class="card h-100">
-              <img src="public/assets/img/archives/4.jpg" class="card-img-top" alt="...">
+              <img src="public/assets/img/archives/44.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">NHÀ PHÁT HÀNH HÀNG ĐẦU ĐÔNG NAM Á</h5>
                 <p class="card-text">(2018, App Annie)</p>
