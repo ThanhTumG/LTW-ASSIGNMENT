@@ -137,7 +137,7 @@
       <div class="container">
         <div class="section-title" data-aos="fade-up">
           <h2>Hình thành <span><strong>và phát triển</strong></span></h2>
-          <p>Thành lập từ năm 2004 đến nay, VNGREEN đã trải qua 14 năm phát triển và mở rộng để trở thành một trong những công ty Internet & Công nghệ hàng đầu Việt Nam và Đông Nam Á, với hơn 3200 thành viên.</p>
+          <p>Được thành lập vào năm 2009, Garena là nhà phát triển và phát hành trò chơi trực tuyến hàng đầu với dấu ấn toàn cầu tại hơn 160 thị trường.</p>
         </div>
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-aos="fade-up">
           <div class="carousel-inner">

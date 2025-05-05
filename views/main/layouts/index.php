@@ -8,36 +8,31 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(public/assets/img/slide/VNG_campus.jpg);">
+        <div class="carousel-item active" style="background-image: url(public/assets/img/slide/banner_esports.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-              <h2>Chào mừng đến với <span>VNGREEN</span></h2>
-              <p>Thành lập ngày 9/9/2004, VNGREEN hiện là công ty Internet và công nghệ hàng đầu, kỳ lân công nghệ 1 tỷ USD + duy nhất của Việt Nam.</p>
+              <h2>Chào mừng đến với <span>GARENA</span></h2>
+              <p>Được thành lập vào năm 2009, Garena là nhà phát triển và phát hành trò chơi trực tuyến hàng đầu với dấu ấn toàn cầu tại hơn 160 thị trường.</p>
             </div>
           </div>
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(public/assets/img/slide/VNG-15.jpg);">
+        <div class="carousel-item" style="background-image: url(public/assets/img/slide/banner_gpc.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-              <h2>Thành công với VNGREEN</h2>
-              <p>Có hơn 80 triệu người dùng tại 193 quốc gia với 15 ngôn ngữ.
-                Ký kết Bản ghi nhớ về việc niêm yết trên sàn chứng khoán Nasdaq (Mỹ).
-                Doanh thu và lợi nhuận năm 2017 cao kỷ lục kể từ khi thành lập.
-                Trở thành „Nhà phát hành hàng đầu khu vực Đông Nam Á“, chính thức khai trương văn phòng tại Thái Lan, Myanmar.
-                Xác định bổ sung các mảng kinh doanh chiến lược mới như Tài chính và thanh toán, Dịch vụ Đám mây.
-                Nền tảng Zalo cán mốc 100 triệu người dùng, không chỉ ở Việt Nam.</p>
+              <h2>Chơi cùng mọi người với GARENA</h2>
+              <p>Nền tảng kết nối game thủ, giúp bạn sát cánh bên đồng đội để khám phá, chinh phục thử thách, và hòa mình vào những thế giới game độc đáo chỉ có trên Garena.</p>
             </div>
           </div>
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(public/assets/img/slide/VNG\ Campus\ 31.jpg);">
+        <div class="carousel-item" style="background-image: url(public/assets/img/slide/banner_aov.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-              <h2>Đồng hành cùng VNGREEN</h2>
-              <p>Chúng tôi luôn chào đón các ứng viên hoài bão, mong muốn dấn thân vào lĩnh vực Internet, yêu thích làm việc trong một môi trường năng động, trẻ trung và đầy thử thách.</p>
+              <h2>Đồng hành cùng GARENA</h2>
+              <p>Chúng tôi mong muốn mang đến cho bạn một nền tảng để phát triển bản thân một cách vượt trội, khai phá tiềm năng và tạo ra ảnh hưởng trong khu vực của bạn.</p>
             </div>
           </div>
         </div>
@@ -60,7 +55,7 @@
   <main id="main">
 
     <!-- ======= About Us Section ======= -->
-    <section id="about-us" class="about-us">
+    <!-- <section id="about-us" class="about-us">
       <div class="container" data-aos="fade-up">
 
         <div class="row content">
@@ -85,14 +80,15 @@
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
+    </section> -->
+    <!-- End About Us Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Sản phẩm</h2>
-          <p>Các lĩnh vực hoạt động của VNGREEN tập trung vào 4 nhóm sản phẩm chủ lực, mang đến cho người dùng những trải nghiệm phong phú và đơn giản hơn.</p>
+          <h2>CHÚNG TÔI LÀM GÌ</h2>
+          <!-- <p>Các lĩnh vực hoạt động của GARENA tập trung vào 4 nhóm sản phẩm chủ lực, mang đến cho người dùng những trải nghiệm phong phú và đơn giản hơn.</p> -->
         </div>
         <div class="row">
           <div class="col-lg-2 col-md-0"></div>
@@ -104,8 +100,10 @@
                 </svg>
                 <i class="bx bx-game"></i>
               </div>
-              <h4><a href="#">Trò chơi trực tuyến</a></h4>
-              <p>Phát triển và sản xuất trò chơi trực tuyến, nhập khẩu và Phát hành các trò chơi nổi tiếng thế giới.</p>
+              <h4><a href="#">GAME</a></h4>
+              <p>Garena là đơn vị vận hành độc quyền các tựa game hàng đầu trên PC và mobile tại nhiều thị trường trên thế giới. </p>
+              <br>
+              <p>Với tinh thần của những game thủ đam mê và thấu hiểu người chơi, chúng tôi luôn kết nối chặt chẽ với cộng đồng để đảm bảo họ luôn được trải nghiệm những tựa game hấp dẫn, lôi cuốn trên cả PC và mobile.</p>
             </div>
           </div>
 
@@ -117,8 +115,10 @@
                 </svg>
                 <i class="bx bx-chat"></i>
               </div>
-              <h4><a href="#">Nền tảng kết nối</a></h4>
-              <p>Phát triển các nền tảng kết nối đa dạng, đa dịch vụ, phục vụ toàn diện nhu cầu kết nối, giải trí.</p>
+              <h4><a href="#">THỂ THAO ĐIỆN TỬ</a></h4>
+              <p>Garena là đơn vị tiên phong và tổ chức hàng loạt giải đấu Esports – từ các giải cộng đồng quy mô nhỏ cho đến những sự kiện chuyên nghiệp có lượng người xem thuộc hàng top thế giới. </p>
+              <br>
+              <p>Những giải đấu này tôn vinh kỹ năng xuất sắc của người chơi, thắt chặt mối liên kết với cộng đồng và góp phần phát triển hệ sinh thái game bền vững.</p>
             </div>
           </div>
           <div class="col-lg-2 col-md-0"></div>
@@ -133,12 +133,14 @@
                 </svg>
                 <i class="bx bx-money"></i>
               </div>
-              <h4><a href="#">Thanh toán và tài chính</a></h4>
-              <p>Các nền tảng và dịch vụ trung gian thanh toán, tài chính cá nhân theo xu hướng mới.</p>
+              <h4><a href="#">CỘNG ĐỒNG</a></h4>
+              <p>Garena thúc đẩy những trải nghiệm giải trí và kết nối xã hội thông qua game, giúp cộng đồng người chơi tương tác và gắn kết với nhau. </p>
+              <br>
+              <p>Chúng tôi xây dựng các cộng đồng game thủ vững mạnh từ cấp địa phương, khu vực đến toàn cầu, đồng thời mang đến cho người chơi những chiến dịch và sự kiện thú vị, gần gũi và truyền cảm hứng.</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+          <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box iconbox-yellow">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +151,7 @@
               <h4><a href="#">Dịch vụ đám mây</a></h4>
               <p>Cung cấp các dịch vụ đám mây toàn diện, các hệ thống, giải pháp công nghệ thông minh dựa trên kết nối Internet và công nghệ đám mây.</p>
             </div>
-          </div>
+          </div> -->
           <div class="col-lg-2 col-md-0"></div>
         </div>
 
@@ -270,7 +272,7 @@
     <!-- End Portfolio Section -->
 
     <!-- ======= Our Clients Section ======= -->
-    <section id="clients" class="clients">
+    <!-- <section id="clients" class="clients">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -331,7 +333,8 @@
         </div>
 
       </div>
-    </section><!-- End Our Clients Section -->
+    </section> -->
+    <!-- End Our Clients Section -->
 
   </main><!-- End #main -->
 
