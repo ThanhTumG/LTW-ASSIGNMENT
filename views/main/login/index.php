@@ -71,7 +71,7 @@
 					</div>
 				</form>
 
-				<div class="login100-more" style="background-image: url('public/assets/img/slide/VNG\ Campus\ 31.jpg');">
+				<div class="login100-more" style="background-image: url('public/assets/img/slide/garena_campus.jpg');">
 				</div>
 			</div>
 		</div>
