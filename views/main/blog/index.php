@@ -83,6 +83,7 @@
                               <div id="comment-' . $comment->id . '-reply-' . $reply->id . '" class="comment comment-reply">
                                 <div class="d-flex">
                                   <div>
+                                    <h5><a href="">' . $comment->user_name . '</a></h5>
                                     <time>' . date("F j, Y, g:i a", strtotime($reply->date)) . '</time>
                                     <p>
                                     ' . $reply->content . '
