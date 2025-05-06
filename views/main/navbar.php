@@ -70,14 +70,14 @@
                 <div class="form-group">
                   <div class="row"> </div>
                   <label>Họ và tên lót</label>
-                  <input class="form-control" type="text" placeholder="Họ và tên lót" name="fname" value="' . $data->fname . '"/>
+                  <input class="form-control" type="text" placeholder="Họ và tên lót" name="fname" required pattern=".{2,30}" title="Họ phải từ 2-30 ký tự" value="' . $data->fname . '"/>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <div class="row"> </div>
                   <label>Tên</label>
-                  <input class="form-control" type="text" placeholder="Tên" name="lname" value="' . $data->lname . '"/>
+                  <input class="form-control" type="text" placeholder="Tên" name="lname" required pattern=".{2,30}" title="Tên phải từ 2-30 ký tự" value="' . $data->lname . '"/>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Tuổi</label>
-                  <input class="form-control" type="number" placeholder="Tuổi" name="age" value="' . $data->age . '"/>
+                  <input class="form-control" type="number" placeholder="Tuổi" name="age" required min="1" title="Tuổi phải là số dương" value="' . $data->age . '"/>
                 </div>
               </div>
               <div class="col-md-6">
@@ -95,13 +95,13 @@
                   <div class="row">
                     <div class="col-md-4">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender"' . (($data->gender == '1')?'checked':"") . ' value="1" />
+                        <input class="form-check-input" type="radio" name="gender"' . (($data->gender == '1')?'checked':"") . ' value="1" require />
                         <label>Nam</label>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender"' . (($data->gender == '0')?'checked':"") . ' value="0" />
+                        <input class="form-check-input" type="radio" name="gender"' . (($data->gender == '0')?'checked':"") . ' value="0" require />
                         <label>Nữ</label>
                       </div>
                     </div>
@@ -112,7 +112,7 @@
 
             <div class="form-group">
               <label>Số điện thoại</label>
-              <input class="form-control" type="number" placeholder="Số điện thoại" name="phone" value="' . $data->phone . '"/>
+              <input class="form-control" type="tel" placeholder="Số điện thoại" name="phone" required pattern="[0-9]{10}" title="Số điện thoại phải có đúng 10 chữ số" value="' . $data->phone . '"/>
             </div>
             <div class="form-group">
               <label>Hình ảnh hiện tại </label>

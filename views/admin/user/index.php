@@ -212,8 +212,7 @@ require_once('views/admin/content_layouts.php'); ?>
 														<div class="form-group">
 															<label>Tuổi</label>
 															<input class="form-control" type="number" placeholder="Tuổi" name="age" 
-															required min="1" title="Tuổi phải là số dương"/>
-															/>
+															required min="1" title="Tuổi phải là số dương" />
 														</div>
 													</div>
 													<div class="col-md-6">
@@ -241,7 +240,6 @@ require_once('views/admin/content_layouts.php'); ?>
 													<label>Số điện thoại</label>
 													<input class="form-control" type="tel" placeholder="Số điện thoại" name="phone" 
 													required pattern="[0-9]{10}" title="Số điện thoại phải có đúng 10 chữ số"/>
-													/>
 												</div>
 												<div class="form-group">
 													<label>Hình ảnh hiện tại </label>

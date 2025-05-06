@@ -1,5 +1,5 @@
 <footer class="main-footer">
-	<strong>Copyright &copy; Khoa KHOA HỌC VÀ KỸ THUẬT MÁY TÍNH.</strong> <br>
+	<strong>Copyright &copy; 2025 Khoa KHOA HỌC VÀ KỸ THUẬT MÁY TÍNH.</strong> <br>
 
 </footer>
 </div>

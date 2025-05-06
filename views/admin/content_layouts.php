@@ -33,8 +33,8 @@
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
 			<!-- Brand Logo-->
 			<a class="brand-link" href="index.php">
-				<img class="brand-image img-circle elevation-3" src="public/dist/img/logo-CSE.png" alt="CSE Logo" style="opacity: .8">
-				<span class="brand-text font-weight-light">HCMUT CSE</span>
+				<img class="brand-image img-circle elevation-3" src="public/dist/img/garena-logo.png" alt="Garena Logo" style="opacity: .8">
+				<span class="brand-text font-weight-light">GARENA MANAGER</span>
 			</a>
 			<!-- Sidebar-->
 			<div class="sidebar">
@@ -44,7 +44,7 @@
 						<img class="img-circle elevation-2" src="public/dist/img/logo-library.png" alt="Library logo">
 					</div>
 					<div class="info">
-						<a class="d-block" href="index.php">Web Company</a>
+						<a class="d-block" href="index.php">Main Web</a>
 					</div>
 				</div>
 				<!-- Sidebar Menu-->

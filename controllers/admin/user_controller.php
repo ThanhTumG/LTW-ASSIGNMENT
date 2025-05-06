@@ -146,9 +146,7 @@ class UserController extends BaseController
             'gender' => isset($_POST['gender']) ? $_POST['gender'] : null,
             'phone' => $_POST['phone'],
             'email' => $_POST['email'],
-            'password' => $_POST['password']
         ];
-		$target_file = $_POST['img'];
 
         // Validate input
         $errors = validateInput($formdata, false);
@@ -158,6 +156,7 @@ class UserController extends BaseController
 			header('Location: index.php?page=admin&controller=user&action=index');
 			exit;
 		}
+
 		$target_file = $_POST['img'];
 		if (!empty($_FILES['fileToUpload']['name'])) {
 			// Xử lý ảnh mới
@@ -213,7 +212,6 @@ class UserController extends BaseController
 			$formdata['gender'],
 			$formdata['age'],
 			$formdata['phone'],
-			$formdata['password']
 		);
 		header('Location: index.php?page=admin&controller=user&action=index');
 	}

@@ -110,34 +110,54 @@ class RegisterController extends BaseController
 		$gender = $_POST['gender'];
 		$age = $_POST['age'];
 		$phone = $_POST['phone'];
-		$urlcurrent = $_POST['img'];
 		// Photo
-		$target_dir = "public/img/user/";
-		$path = $_FILES['fileToUpload']['name'];
-		$ext = pathinfo($path, PATHINFO_EXTENSION);
-		$id = (string)date("Y_m_d_h_i_sa");
-		$fileuploadname = (string)$id;
-		$fileuploadname .= ".";
-		$fileuploadname .= $ext;
-		$target_file = $target_dir . basename($fileuploadname);
-		if (file_exists($target_file)) {
-			echo "Sorry, file already exists.";
+
+		$target_file = $_POST['img'];
+		if (!empty($_FILES['fileToUpload']['name'])) {
+			// Xử lý ảnh mới
+			$target_dir = "public/img/user/";
+			$path = $_FILES['fileToUpload']['name'];
+			$ext = pathinfo($path, PATHINFO_EXTENSION);
+			$id = (string)date("Y_m_d_h_i_sa");
+			$fileuploadname = $id . "." . $ext;
+			$target_file = $target_dir . basename($fileuploadname);
+	
+			// Kiểm tra file đã tồn tại
+			if (file_exists($target_file)) {
+				$_SESSION['err'] = "Sorry, file already exists.";
+				header('Location: index.php?page=admin&controller=user&action=index' . $user_id);
+				exit;
+			}
+	
+			// Kiểm tra định dạng file
+			$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+			if (!in_array($fileType, ["jpg", "png", "jpeg", "gif"])) {
+				$_SESSION['err'] = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+				header('Location: index.php?page=main&controller=layouts&action=index' . $user_id);
+				exit;
+			}
+	
+			// Kiểm tra kích thước file
+			if ($_FILES["fileToUpload"]["size"] > 5000000) {
+				$_SESSION['err'] = "Sorry, your file is too large.";
+				header('Location: index.php?page=main&controller=layouts&action=index' . $user_id);
+				exit;
+			}
+	
+			// Kiểm tra lỗi upload
+			if ($_FILES['fileToUpload']['error'] !== UPLOAD_ERR_OK) {
+				$_SESSION['err'] = "Error occurred during file upload.";
+				header('Location: index.php?page=main&controller=layouts&action=index' . $user_id);
+				exit;
+			}
+	
+			// Di chuyển file mới
+			if (!move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+				$_SESSION['err'] = "Error occurred while moving the uploaded file.";
+				header('Location: index.php?page=main&controller=layouts&action=index' . $user_id);
+				exit;
+			}
 		}
-		$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-		// Allow certain file formats
-		if (
-			$fileType != "jpg" && $fileType != "png" && $fileType != "jpeg"
-			&& $fileType != "gif"
-		) {
-			echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-			$upload_ok = 0;
-		}
-		if ($_FILES["fileToUpload"]["size"] > 500000) {
-			echo "Sorry, your file is too large.";
-		}
-		$file_pointer = $urlcurrent;
-		unlink($file_pointer);
-		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 		// Update
 		$change_info = User::update($email, $target_file, $fname, $lname, $gender, $age, $phone);
 		header('Location: index.php?page=main&controller=layouts&action=index');
