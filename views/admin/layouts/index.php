@@ -6,7 +6,13 @@ if (!isset($_SESSION["user"])) {
 ?>
 <?php
 require_once('views/admin/header.php'); ?>
-
+<style>
+    .card-img-top {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+</style>
 <!-- Add CSS -->
 
 
