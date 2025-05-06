@@ -2,6 +2,48 @@
 require_once('controllers/admin/base_controller.php');
 require_once('models/user.php');
 
+// Form validation function
+function validateInput($formdata) {
+    $errors = [];
+    
+    // Validate fname (2-30 characters)
+    if (!preg_match("/^.{2,30}$/", $formdata['fname'])) {
+        $errors['fname'] = "Họ phải từ 2-30 ký tự";
+    }
+    
+    // Validate lname (2-30 characters)
+    if (!preg_match("/^.{2,30}$/", $formdata['lname'])) {
+        $errors['lname'] = "Tên phải từ 2-30 ký tự";
+    }
+    
+    // Validate email
+    if (!filter_var($formdata['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = "Email không hợp lệ";
+    }
+    
+    // Validate phone (exactly 10 digits)
+    if (!preg_match("/^[0-9]{10}$/", $formdata['phone'])) {
+        $errors['phone'] = "Số điện thoại phải có đúng 10 chữ số";
+    }
+    
+    // Validate age (positive number)
+    if (!is_numeric($formdata['age']) || $formdata['age'] <= 0) {
+        $errors['age'] = "Tuổi phải là số dương";
+    }
+    
+    // Validate password (min 8 chars, no special characters)
+    if (!preg_match("/^[a-zA-Z0-9]{8,}$/", $formdata['password'])) {
+        $errors['password'] = "Mật khẩu phải ít nhất 8 ký tự và không chứa ký tự đặc biệt";
+    }
+    
+    // Validate gender (must be 0 or 1)
+    if (!isset($formdata['gender']) || !in_array($formdata['gender'], ['0', '1'])) {
+        $errors['gender'] = "Vui lòng chọn giới tính";
+    }
+    
+    return $errors;
+}
+
 class UserController extends BaseController
 {
 	function __construct()
@@ -18,14 +60,26 @@ class UserController extends BaseController
 
 	public function add()
 	{
-		$fname = $_POST['fname'];
-		$lname = $_POST['lname'];
-		$age = $_POST['age'];
-		$gender = $_POST['gender'];
-		$phone = $_POST['phone'];
-		$email = $_POST['email'];
-		$password = $_POST['password'];
-		echo $fname . $lname . $age . $gender . $phone . $email . $password;
+		session_start();
+		$formdata = [
+            'fname' => $_POST['fname'],
+            'lname' => $_POST['lname'],
+            'age' => $_POST['age'],
+            'gender' => isset($_POST['gender']) ? $_POST['gender'] : null,
+            'phone' => $_POST['phone'],
+            'email' => $_POST['email'],
+            'password' => $_POST['password']
+        ];
+
+        // Validate input
+        $errors = validateInput($formdata);
+        
+		if (!empty($errors)) {
+			$_SESSION['err'] = implode(", ", $errors);
+			header('Location: index.php?page=admin&controller=user&action=index');
+			exit;
+		}
+
 		// Photo
 		$target_dir = "public/img/user/";
 		$path = $_FILES['fileToUpload']['name'];
@@ -37,24 +91,47 @@ class UserController extends BaseController
 		$fileuploadname .= $ext;
 		$target_file = $target_dir . basename($fileuploadname);
 		if (file_exists($target_file)) {
-			echo "Sorry, file already exists.";
+			$_SESSION['err'] = "Sorry, file already exists.";
+			header('Location: index.php?page=admin&controller=user&action=index');
+			exit;
 		}
 		$fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 		// Allow certain file formats
-		if (
-			$fileType != "jpg" && $fileType != "png" && $fileType != "jpeg"
-			&& $fileType != "gif"
-		) {
-			echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-			$upload_ok = 0;
+		if (!in_array($fileType, ["jpg", "png", "jpeg", "gif"])) {
+        $_SESSION['err'] = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        header('Location: index.php?page=admin&controller=user&action=index');
+        exit;
+    	}
+		if ($_FILES["fileToUpload"]["size"] > 5000000) {
+			$_SESSION['err'] = "Sorry, your file is too large.";
+			header('Location: index.php?page=admin&controller=user&action=index');
+			exit;
 		}
-		if ($_FILES["fileToUpload"]["size"] > 500000) {
-			echo "Sorry, your file is too large.";
+		// Try to upload file
+        if (!move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+			$_SESSION['err'] = "Lỗi khi tải tệp lên";
+			header('Location: index.php?page=admin&controller=user&action=index');
+			exit;
 		}
-		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+
 		// Add new
-		$add_new = User::insert($email, $target_file, $fname, $lname, $gender, $age, $phone, $password);
-		header('Location: index.php?page=admin&controller=user&action=index');
+		 // Check if email already exists
+		 if (User::getvalidate($formdata['email']) > 0) {
+			$_SESSION['err'] = "Tài khoản đã tồn tại";
+			header('Location: index.php?page=admin&controller=user&action=index');
+			exit;
+		}
+			User::insert(
+				$formdata['email'],
+				$target_file,
+				$formdata['fname'],
+				$formdata['lname'],
+				$formdata['gender'],
+				$formdata['age'],
+				$formdata['phone'],
+				$formdata['password']
+			);
+			header('Location: index.php?page=admin&controller=user&action=index');
 	}
 
 	public function editInfo()

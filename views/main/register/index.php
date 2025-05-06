@@ -67,7 +67,7 @@
 							pattern=".{2,30}"
 							title="Họ phải từ 2-30 ký tự">
 						<span class="focus-input100"></span>
-						<label for="floatingFname">Họ</label>
+						<label for="floatingFname">Họ và tên lót</label>
 					</div>
 
 					<div class="form-floating mb-3 validate-input" data-validate="Last name must be 2-30 characters">

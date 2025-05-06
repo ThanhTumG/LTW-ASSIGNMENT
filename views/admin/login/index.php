@@ -19,10 +19,13 @@ if (isset($_SESSION["user"])) {
 	<link rel="stylesheet" href="public/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 	<!-- Theme style-->
 	<link rel="stylesheet" href="public/dist/css/adminlte.min.css">
+	<link href="public/assets/css/util.css" rel="stylesheet">
+
+
 </head>
 <body class="hold-transition login-page">
 	<div class="login-box">
-		<div class="login-logo"><a href="/index2.html"><b>Company</b>Manager</a></div>
+		<div class="login-logo"><b>Garena</b>Manager</div>
 		<!-- /.login-logo-->
 		<div class="card">
 			<div class="card-body login-card-body">
@@ -47,6 +50,11 @@ if (isset($_SESSION["user"])) {
 							<div class="input-group-text"><span class="fas fa-lock"></span></div>
 						</div>
 					</div>
+					<div>
+						<a href="index.php?page=main&controller=layouts&action=index" class="fs-13 text-secondary">
+							Trở về trang chủ!
+						</a>
+						</div>
 					<div class="row">
 						<div class="col-7"></div>
 						<!-- /.col-->

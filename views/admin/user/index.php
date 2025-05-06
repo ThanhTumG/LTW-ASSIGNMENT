@@ -42,30 +42,40 @@ require_once('views/admin/content_layouts.php'); ?>
 					<div class="card">
 						<div class="card-body">
 							<!-- Button trigger modal-->
-							<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#addUserModal">Thêm mới</button>
+							 <div class="row gap-3">
+								 <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#addUserModal">Thêm mới</button>
+								 <?php
+								if (isset($_SESSION['err'])) {
+									echo '<p class="text-danger">' . htmlspecialchars($_SESSION['err']) . '</p>';
+									unset($_SESSION['err']); // Xóa lỗi sau khi hiển thị
+								}
+								?>
+								</div>
 							<!-- Modal-->
 							<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModal" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
-											<h5 class="modal-title">Thêm mới</h5>
+											<h5 class="modal-title">Thêm người dùng</h5>
 											<button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 										</div>
 										<form action="index.php?page=admin&controller=user&action=add" enctype="multipart/form-data" method="post">
 											<div class="modal-body">
+												
+												
 												<div class="row">
 													<div class="col-md-6">
 														<div class="form-group">
-															<div class="row"> </div>
 															<label>Họ và tên lót</label>
-															<input class="form-control" type="text" placeholder="Họ và tên lót" name="fname" />
+															<input class="form-control" type="text" placeholder="Họ và tên lót" name="fname" 
+																required pattern=".{2,30}" title="Họ phải từ 2-30 ký tự"/>
 														</div>
 													</div>
 													<div class="col-md-6">
 														<div class="form-group">
-															<div class="row"> </div>
 															<label>Tên</label>
-															<input class="form-control" type="text" placeholder="Tên" name="lname" />
+															<input class="form-control" type="text" placeholder="Tên" name="lname" 
+																required pattern=".{2,30}" title="Tên phải từ 2-30 ký tự"/>
 														</div>
 													</div>
 												</div>
@@ -74,7 +84,8 @@ require_once('views/admin/content_layouts.php'); ?>
 													<div class="col-md-6">
 														<div class="form-group">
 															<label>Tuổi</label>
-															<input class="form-control" type="number" placeholder="Tuổi" name="age" />
+															<input class="form-control" type="number" placeholder="Tuổi" name="age" 
+																required min="1" title="Tuổi phải là số dương"/>
 														</div>
 													</div>
 													<div class="col-md-6">
@@ -83,13 +94,13 @@ require_once('views/admin/content_layouts.php'); ?>
 															<div class="row">
 																<div class="col-md-4">
 																	<div class="form-check">
-																		<input class="form-check-input" type="radio" name="gender" value="1" />
+																		<input class="form-check-input" type="radio" name="gender" value="1" required/>
 																		<label>Nam</label>
 																	</div>
 																</div>
 																<div class="col-md-4">
 																	<div class="form-check">
-																		<input class="form-check-input" type="radio" name="gender" value="0" />
+																		<input class="form-check-input" type="radio" name="gender" value="0" required/>
 																		<label>Nữ</label>
 																	</div>
 																</div>
@@ -100,23 +111,26 @@ require_once('views/admin/content_layouts.php'); ?>
 
 												<div class="form-group">
 													<label>Số điện thoại</label>
-													<input class="form-control" type="number" placeholder="Số điện thoại" name="phone" />
+													<input class="form-control" type="tel" placeholder="Số điện thoại" name="phone" 
+														required pattern="[0-9]{10}" title="Số điện thoại phải có đúng 10 chữ số"/>
 												</div>
 
 												<div class="form-group">
 													<label>Email</label>
-													<input class="form-control" type="text" placeholder="Email" name="email" />
+													<input class="form-control" type="email" placeholder="Email" name="email" 
+														required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Email không hợp lệ"/>
 												</div>
 
 												<div class="form-group">
 													<label>Mật khẩu</label>
-													<input class="form-control" type="password" placeholder="Mật khẩu" name="password" />
-												</div>
-												<div class="form-group">
-													<label>Hình ảnh</label>&nbsp
-													<input type="file" name="fileToUpload" id="fileToUpload" />
+													<input class="form-control" type="password" placeholder="Mật khẩu" name="password" 
+														required pattern="[a-zA-Z0-9]{8,}" title="Mật khẩu phải ít nhất 8 ký tự và không chứa ký tự đặc biệt"/>
 												</div>
 
+												<div class="form-group">
+													<label>Hình ảnh</label>
+													<input type="file" name="fileToUpload" id="fileToUpload" accept=".jpg,.jpeg,.png,.gif" required/>
+												</div>
 											</div>
 											<div class="modal-footer">
 												<button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng lại</button>
