@@ -194,14 +194,15 @@ require_once('views/admin/content_layouts.php'); ?>
 														<div class="form-group">
 															<div class="row"> </div>
 															<label>Họ và tên lót</label>
-															<input class="form-control" type="text" placeholder="Họ và tên lót" name="fname" />
+															<input class="form-control" type="text" placeholder="Họ và tên lót" name="fname" 
+																required pattern=".{2,30}" title="Họ phải từ 2-30 ký tự"/>
 														</div>
 													</div>
 													<div class="col-md-6">
 														<div class="form-group">
 															<div class="row"> </div>
 															<label>Tên</label>
-															<input class="form-control" type="text" placeholder="Tên" name="lname" />
+															<input class="form-control" type="text" placeholder="Tên" name="lname" required pattern=".{2,30}" title="Tên phải từ 2-30 ký tự"/>
 														</div>
 													</div>
 												</div>
@@ -210,7 +211,9 @@ require_once('views/admin/content_layouts.php'); ?>
 													<div class="col-md-6">
 														<div class="form-group">
 															<label>Tuổi</label>
-															<input class="form-control" type="number" placeholder="Tuổi" name="age" />
+															<input class="form-control" type="number" placeholder="Tuổi" name="age" 
+															required min="1" title="Tuổi phải là số dương"/>
+															/>
 														</div>
 													</div>
 													<div class="col-md-6">
@@ -219,13 +222,13 @@ require_once('views/admin/content_layouts.php'); ?>
 															<div class="row">
 																<div class="col-md-4">
 																	<div class="form-check">
-																		<input class="form-check-input" type="radio" name="gender" value="1" id="Nam" />
+																		<input class="form-check-input" type="radio" name="gender" value="1" id="Nam" require/>
 																		<label>Nam</label>
 																	</div>
 																</div>
 																<div class="col-md-4">
 																	<div class="form-check">
-																		<input class="form-check-input" type="radio" name="gender" value="0" id="Nu" />
+																		<input class="form-check-input" type="radio" name="gender" value="0" id="Nu"required />
 																		<label>Nữ</label>
 																	</div>
 																</div>
@@ -236,7 +239,9 @@ require_once('views/admin/content_layouts.php'); ?>
 
 												<div class="form-group">
 													<label>Số điện thoại</label>
-													<input class="form-control" type="number" placeholder="Số điện thoại" name="phone" />
+													<input class="form-control" type="tel" placeholder="Số điện thoại" name="phone" 
+													required pattern="[0-9]{10}" title="Số điện thoại phải có đúng 10 chữ số"/>
+													/>
 												</div>
 												<div class="form-group">
 													<label>Hình ảnh hiện tại </label>
@@ -245,6 +250,7 @@ require_once('views/admin/content_layouts.php'); ?>
 												<div class="form-group">
 													<label>Hình ảnh mới</label>&nbsp
 													<input type="file" name="fileToUpload" id="fileToUpload" />
+													
 												</div>
 											</div>
 											<div class="modal-footer">
