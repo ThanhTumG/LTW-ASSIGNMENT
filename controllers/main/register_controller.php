@@ -2,6 +2,50 @@
 require_once('controllers/main/base_controller.php');
 require_once('models/user.php');
 
+
+// Form validation function
+function validateInput($data) {
+    $errors = [];
+    
+    // Validate fname (2-30 characters)
+    if (!preg_match("/^.{2,30}$/", $data['fname'])) {
+        $errors['fname'] = "Họ phải từ 2-30 ký tự";
+    }
+    
+    // Validate lname (2-30 characters)
+    if (!preg_match("/^.{2,30}$/", $data['lname'])) {
+        $errors['lname'] = "Tên phải từ 2-30 ký tự";
+    }
+    
+    // Validate email
+    if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = "Email không hợp lệ";
+    }
+    
+    // Validate phone (exactly 10 digits)
+    if (!preg_match("/^[0-9]{10}$/", $data['phone'])) {
+        $errors['phone'] = "Số điện thoại phải có đúng 10 chữ số";
+    }
+    
+    // Validate age (positive number)
+    if (!is_numeric($data['age']) || $data['age'] <= 0) {
+        $errors['age'] = "Tuổi phải là số dương";
+    }
+    
+    // Validate password (min 8 chars, no special characters)
+    if (!preg_match("/^[a-zA-Z0-9]{8,}$/", $data['pass'])) {
+        $errors['pass'] = "Mật khẩu phải ít nhất 8 ký tự và không chứa ký tự đặc biệt";
+    }
+
+	// Validate gender (must be 0 or 1)
+	if (!isset($data['gender']) || !in_array($data['gender'], ['0', '1'])) {
+		$errors['gender'] = "Vui lòng chọn giới tính";
+	}
+    
+    return $errors;
+}
+
+
 class RegisterController extends BaseController
 {
 	function __construct()
@@ -16,21 +60,44 @@ class RegisterController extends BaseController
 
 	public function submit()
 	{
-		$fname = $_POST['fname'];
-		$lname = $_POST['lname'];
-		$age = $_POST['age'];
-		$gender = $_POST['gender'];
-		$phone = $_POST['phone'];
-		$email = $_POST['email'];
-		$password = $_POST['pass'];
-		if(User::getvalidate($email) > 0){
-			$err = "Tài khoản đã tồn tại";
-			$data = array('err' => $err);
-			$this->render('index', $data);
-		} else{
-			User::insert($email, 'public/img/user/default.png', $fname, $lname, $gender, $age, $phone, $password);
-			header('Location: index.php?page=main&controller=layouts&action=index');
-		}
+		$data = [
+            'fname' => $_POST['fname'],
+            'lname' => $_POST['lname'],
+            'age' => $_POST['age'],
+            'gender' => $_POST['gender'],
+            'phone' => $_POST['phone'],
+            'email' => $_POST['email'],
+            'pass' => $_POST['pass']
+		];
+
+		// Validate input
+        $errors = validateInput($data);
+
+		if (!empty($errors)) {
+            $err = implode(", ", $errors);
+            $data = array('err' => $err);
+            $this->render('index', $data);
+            return;
+        }
+
+		 // Check if email already exists
+		 if (User::getvalidate($data['email']) > 0) {
+            $err = "Tài khoản đã tồn tại";
+            $data = array('err' => $err);
+            $this->render('index', $data);
+        } else {
+            User::insert(
+                $data['email'],
+                'public/img/user/default.png',
+                $data['fname'],
+                $data['lname'],
+                $data['gender'],
+                $data['age'],
+                $data['phone'],
+                $data['pass']
+            );
+            header('Location: index.php?page=main&controller=layouts&action=index');
+        }
 		
 	}
 
