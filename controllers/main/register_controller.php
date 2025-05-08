@@ -88,7 +88,7 @@ class RegisterController extends BaseController
         } else {
             User::insert(
                 $data['email'],
-                'public/img/user/default.jpg',
+                'public/img/user/default-avatar.jpg',
                 $data['fname'],
                 $data['lname'],
                 $data['gender'],

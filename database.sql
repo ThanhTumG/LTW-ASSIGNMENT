@@ -39,8 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`username`, `password`, `createAt`, `updateAt`) VALUES
-('admin', '$2y$10$71ZJXVruNg6NYCCCg07UROxg9zQeIShNfLO.cmHt31ZjNc1fAWn0W', '2022-11-29 10:08:52', '2022-11-29 10:08:52'),
-('admin123', '$2y$10$AyFdLHWsP1/r6ZelX0Ab/uFLdL.oRZi46g/wm04emdlqTrDgmZZlC', '2022-11-29 10:08:52', '2022-11-29 10:09:20');
+('admin', '$2y$10$71ZJXVruNg6NYCCCg07UROxg9zQeIShNfLO.cmHt31ZjNc1fAWn0W', '2025-01-01 10:08:52', '2025-01-01 10:08:52');
 
 -- --------------------------------------------------------
 
