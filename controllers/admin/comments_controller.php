@@ -30,7 +30,7 @@ class CommentsController extends BaseController
     }
     public function edit(){
         $id = $_POST['id'];
-        $content = $_POST['title'];
+        $content = $_POST['content'];
         Comment::update($id, $content);
         header('Location: index.php?page=admin&controller=comments&action=index');
     }
