@@ -20,8 +20,6 @@
             <h4>Link liên kết</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/GarenaMobileVN">Facebook</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/LifeAtVNG/">Life at VNG</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/groups/VNGRunClub/">VNG Run Club</a></li> -->
             </ul>
           </div>
 
@@ -29,9 +27,6 @@
             <h4>Trung tâm hỗ trợ</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="https://hotro.garena.vn/">CSKH</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="https://zalo.me/lienhe.html">Hỗ trợ tài khoản Zalo</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.vngcloud.vn/web/guest/trang-chu">Hỗ trợ dịch vụ Clouds</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://zalopay.vn/trung-tam-ho-tro">Hỗ trợ dịch vụ ZaloPay</a></li> -->
             </ul>
           </div>
 

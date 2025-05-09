@@ -71,8 +71,7 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links d-flex">
-        <a href="https://www.facebook.com/VNGCorporation.Page/" class="facebook"><i class="bu bi-facebook"></i></a>
-        <a href="https://www.youtube.com/channel/UCk2jT9v-BOmjbPZ08LUbTVA" class="youtube"><i class="bu bi-youtube"></i></a>
+
       </div>
 
     </div>
@@ -355,37 +354,26 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Trụ sở chính</h3>
             <p>
-              Tầng 6, Tòa nhà Capital Place, Số 29 Liễu Giai,<br>
-              Ngọc Khánh,<br>
-              Ba Đình, Hà Nội.<br><br>
-              <strong>Điện thoại:</strong> 090 918 34 46<br>
-              <strong>Email:</strong> start@vng.com.vn<br>
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Link liên kết</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/VNGCorporation.Page/">Facebook</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.youtube.com/channel/UCk2jT9v-BOmjbPZ08LUbTVA">Youtube</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/LifeAtVNG/">Life at VNG</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/groups/VNGRunClub/">VNG Run Club</a></li>
+
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Trung tâm hỗ trợ</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://hotro.zing.vn/">Hỗ trợ tài khoản Games</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://zalo.me/lienhe.html">Hỗ trợ tài khoản Zalo</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.vngcloud.vn/web/guest/trang-chu">Hỗ trợ dịch vụ Clouds</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://zalopay.vn/trung-tam-ho-tro">Hỗ trợ dịch vụ ZaloPay</a></li>
+              
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Đăng ký nhận tin tức mới nhất</h4>
-            <p>Những thông tin và tin tức mới nhất về VNGreen sẽ được gửi đến bạn qua email bạn điền dưới đây</p>
+
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Đăng ký">
             </form>
@@ -399,15 +387,12 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>VNGREEN</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="#">VNGREEN</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://www.facebook.com/VNGCorporation.Page/" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.youtube.com/channel/UCk2jT9v-BOmjbPZ08LUbTVA" class="youtube"><i class="bx bxl-youtube"></i></a>
+
       </div>
     </div>
   </footer><!-- End Footer -->
